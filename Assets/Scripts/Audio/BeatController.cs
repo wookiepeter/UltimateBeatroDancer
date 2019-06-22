@@ -52,6 +52,7 @@ public class BeatController : MonoBehaviour
         _audioSource.clip = _audioClip;
         _beat = new Beat(0.5f, 16.12f);
         _audioSource.Play();
+        _audioSource.pitch = 0.5f;
         _audioSource.time = 15f;
 
         instance = this;
