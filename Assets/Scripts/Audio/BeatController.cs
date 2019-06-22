@@ -14,6 +14,9 @@ public class BeatController : MonoBehaviour
     BeatLabelProcessorParams beatLabelProcessorParams = new BeatLabelProcessorParams(0.01f, 0.75f, 15, 0.65f);
     [SerializeField]
     AudioSource _audioSource;
+    [SerializeField]
+    [Range(0.5f, 2f)]
+    float _playSpeed = 1f;
 
     Beat _beat;
     BeatLabelProcessorParams _oldBeatLabelProcessorParams;
@@ -52,6 +55,7 @@ public class BeatController : MonoBehaviour
         _audioSource.clip = _audioClip;
         _beat = new Beat(0.5f, 16.12f);
         _audioSource.Play();
+        _audioSource.pitch = _playSpeed;
         _audioSource.time = 15f;
 
         instance = this;
@@ -71,6 +75,7 @@ public class BeatController : MonoBehaviour
             Debug.Log("Beat! +++ " + _audioSource.time);
             BeatSubject.NotifyOnBeat();
 
+            _audioSource.pitch = _playSpeed;
         } else
         {
 

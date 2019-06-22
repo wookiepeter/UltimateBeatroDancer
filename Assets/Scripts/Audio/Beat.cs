@@ -42,8 +42,8 @@ public class Beat : System.IFormattable
         if (songTime > _nextBeatTime)
         {
             _beatCounter++;
-            _nextBeatTime = _beatStart + _beatCounter * 0.25f * BeatTimeDiff;
-            return _beatCounter % 4;
+            _nextBeatTime = _beatStart + _beatCounter * 0.125f * BeatTimeDiff;
+            return _beatCounter % 8;
         }
 
         return -1;

@@ -130,6 +130,6 @@ MonoBehaviour:
   - {fileID: -9002694824568986395, guid: fd0109388effdce46b79330e86beee83, type: 3}
   - {fileID: -3472291416900189508, guid: fd0109388effdce46b79330e86beee83, type: 3}
   renderer: {fileID: 1994466138647211615}
-  currentIndex: 0
+  currentIndex: 2
   activationIndex: 0
   deactivationIndex: 2
