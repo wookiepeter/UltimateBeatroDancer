@@ -40,7 +40,10 @@ public class TileAnimator : MonoBehaviour, IBeatObserver
 
     public void OffBeat(int offBeatCounter)
     {
-        UpdateTile();
+        if (offBeatCounter % 2 == 0)
+        {
+            UpdateTile();
+        }
     }
 
     public void OnBeat()
