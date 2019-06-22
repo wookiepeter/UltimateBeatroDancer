@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: e238c3e6260eb454ca5821601e391ec9
+guid: 7252a7a668114a24ab4b1ff7e56dac59
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3261713339566622406
-    second: Goalpost_Top
+      213: 4587867560482055224
+    second: BeatBar_0
   - first:
-      213: 6358596054977705739
-    second: Goalpost_Bottom
+      213: -2473925012182851052
+    second: BeatBar_1
+  - first:
+      213: -1794675563973805276
+    second: BeatBar_2
+  - first:
+      213: 2693188861836404068
+    second: BeatBar_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -52,7 +58,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 0, y: 2, z: 0, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -90,34 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goalpost_Top
+      name: BeatBar_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4f0a9380ba6c374ab12de61c9909a6a
-      internalID: 3261713339566622406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goalpost_Bottom
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        y: 126
+        width: 100
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,8 +110,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3066887f21e692d4483add81f89b691f
-      internalID: 6358596054977705739
+      spriteID: 14e2eb1cfa3332340bf3becc9b32dc00
+      internalID: 4587867560482055224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeatBar_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 100
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2400c30d3fe04594fb50580cdb3cc4d8
+      internalID: -2473925012182851052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeatBar_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 100
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190857611b3474c46851fe5622fb1a7d
+      internalID: -1794675563973805276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeatBar_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ff007082d2bec41ade3dd0d3b69f62
+      internalID: 2693188861836404068
       vertices: []
       indices: 
       edges: []
@@ -134,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 967e2b38cf5c2fa4198b7134f3992732
+    spriteID: 750d299e17cd5f64bb6d97979eee42a1
     internalID: 0
     vertices: []
     indices: 

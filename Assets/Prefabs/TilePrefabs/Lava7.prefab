@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 663229394214551395}
   - component: {fileID: 663229394214551394}
   - component: {fileID: 663229394214551392}
-  - component: {fileID: 663229394214551423}
+  - component: {fileID: -8869959271973571195}
   m_Layer: 0
   m_Name: Lava7
   m_TagString: Untagged
@@ -108,7 +108,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &663229394214551423
+--- !u!114 &-8869959271973571195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 663229394214551422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbe4c416944b404392d0cefeb1051a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 810fb2c1fef3baa4a8dac462531daaac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
@@ -132,4 +132,4 @@ MonoBehaviour:
   renderer: {fileID: 663229394214551394}
   currentIndex: 0
   activationIndex: 0
-  deactivationIndex: 2
+  deactivationIndex: 0

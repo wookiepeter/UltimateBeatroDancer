@@ -15,7 +15,7 @@ public class BeatController : MonoBehaviour
     [SerializeField]
     AudioSource _audioSource;
     [SerializeField]
-    [Range(0.5f, 2f)]
+    [Range(0.5f, 8f)]
     float _playSpeed = 1f;
 
     Beat _beat;
@@ -68,17 +68,22 @@ public class BeatController : MonoBehaviour
         if (beatCounter > 0)
         {
             // Update Beats here
-            Debug.Log("OffBeat!!! --- " + _audioSource.time);
             BeatSubject.NotifyOnOffBeat(beatCounter);
         } else if (beatCounter >= 0)
         {
-            Debug.Log("Beat! +++ " + _audioSource.time);
             BeatSubject.NotifyOnBeat();
 
             _audioSource.pitch = _playSpeed;
         } else
         {
 
+        }
+
+        if(_audioSource.isPlaying == false)
+        {
+            _beat.reset();
+            _audioSource.clip = _audioClip;
+            _audioSource.Play();
         }
     }
 
