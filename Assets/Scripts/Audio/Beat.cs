@@ -10,8 +10,8 @@ public class Beat : System.IFormattable
     float _bpm;
 
     int _beatCounter;
-    float _nextBeatTime; 
-
+    float _nextBeatTime;
+    
     public Beat(float beatTimeDiff, float beatStart) 
     {
         _beatTimeDiff = beatTimeDiff;
@@ -35,15 +35,17 @@ public class Beat : System.IFormattable
         _nextBeatTime = BeatStart;
     } 
 
-    public bool UpdateBeat(float songTime)
+
+
+    public int UpdateBeat(float songTime)
     {
         if (songTime > _nextBeatTime)
         {
             _beatCounter++;
-            _nextBeatTime = _beatCounter * BeatTimeDiff;
-            return true;
+            _nextBeatTime = _beatStart + _beatCounter * 0.25f * BeatTimeDiff;
+            return _beatCounter % 4;
         }
 
-        return false;
+        return -1;
     }
 }
