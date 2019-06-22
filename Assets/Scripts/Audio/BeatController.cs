@@ -4,7 +4,91 @@ using UnityEngine;
 
 public class BeatController : MonoBehaviour
 {
-    [System.Serializable]
+    private static BeatController instance; 
+   
+    [SerializeField]
+    TextAsset _beatLabelFile;
+    [SerializeField]
+    AudioClip _audioClip;
+    [SerializeField]
+    BeatLabelProcessorParams beatLabelProcessorParams = new BeatLabelProcessorParams(0.01f, 0.75f, 15, 0.65f);
+    [SerializeField]
+    AudioSource _audioSource;
+
+    Beat _beat;
+    BeatLabelProcessorParams _oldBeatLabelProcessorParams;
+    BeatLabelProcessor _beatLabelProcessor;
+    BeatSubject _beatSubject;
+
+    public BeatSubject BeatSubject { get => _beatSubject; }
+
+    public static BeatController GetInstance()
+    {
+        if(instance == null)
+        {
+            Debug.LogError("Cannot retrieve BeatControler before Awake was called!");
+        }
+        return instance;
+    }
+
+    private void Awake()
+    {
+        _beatLabelProcessor = new BeatLabelProcessor(_beatLabelFile);
+        _oldBeatLabelProcessorParams = null;
+        _audioSource.clip = _audioClip;
+        _beat = new Beat(0.5f, 16.12f);
+        _beatSubject = new BeatSubject();
+
+        instance = this;
+    }
+
+    
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        _beatLabelProcessor = new BeatLabelProcessor(_beatLabelFile);
+        _oldBeatLabelProcessorParams = null;
+        _audioSource.clip = _audioClip;
+        _beat = new Beat(0.5f, 16.12f);
+        _audioSource.Play();
+        _audioSource.time = 15f;
+
+        instance = this;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        int beatCounter = _beat.UpdateBeat(_audioSource.time);
+        if (beatCounter > 0)
+        {
+            // Update Beats here
+            Debug.Log("OffBeat!!! --- " + _audioSource.time);
+            BeatSubject.NotifyOnOffBeat(beatCounter);
+        } else if (beatCounter >= 0)
+        {
+            Debug.Log("Beat! +++ " + _audioSource.time);
+            BeatSubject.NotifyOnBeat();
+
+        } else
+        {
+
+        }
+    }
+
+    void updateBeatprocessor()
+    {
+        if(beatLabelProcessorParams.Equals(_oldBeatLabelProcessorParams) == false)
+        {
+            _beatLabelProcessor.ComputeBeat(beatLabelProcessorParams);
+            _oldBeatLabelProcessorParams = beatLabelProcessorParams.Clone();
+        }
+    }
+
+    
+
+    [SerializeField]
     public class BeatLabelProcessorParams : IEqualityComparer
     {
         [SerializeField]
@@ -64,47 +148,4 @@ public class BeatController : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    TextAsset _beatLabelFile;
-    [SerializeField]
-    AudioClip _audioClip;
-    [SerializeField]
-    BeatLabelProcessorParams beatLabelProcessorParams = new BeatLabelProcessorParams(0.01f, 0.75f, 15, 0.65f);
-    [SerializeField]
-    AudioSource _audioSource;
-
-    Beat _beat;
-
-    BeatLabelProcessorParams oldBeatLabelProcessorParams;
-
-    BeatLabelProcessor beatLabelProcessor;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        beatLabelProcessor = new BeatLabelProcessor(_beatLabelFile);
-        oldBeatLabelProcessorParams = null;
-        _audioSource.clip = _audioClip;
-
-        _beat = new Beat(0.5f, 16.12f);
-        _audioSource.Play();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (_beat.UpdateBeat(_audioSource.time))
-        {
-            // Update Beats here
-        }
-    }
-
-    void updateBeatprocessor()
-    {
-        if(beatLabelProcessorParams.Equals(oldBeatLabelProcessorParams) == false)
-        {
-            beatLabelProcessor.ComputeBeat(beatLabelProcessorParams);
-            oldBeatLabelProcessorParams = beatLabelProcessorParams.Clone();
-        }
-    }
 }
