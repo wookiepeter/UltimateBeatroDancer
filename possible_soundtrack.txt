@@ -8,6 +8,7 @@ Selection:
 
 Pretty good:
 http://dig.ccmixter.org/files/destinazione_altrove/59536
+-> slow: 0.62 - fast: 1.4
 http://dig.ccmixter.org/files/Kamihamiha/23333
 
 Maybe: 

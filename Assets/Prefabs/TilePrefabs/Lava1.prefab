@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 663229394214551395}
   - component: {fileID: 663229394214551394}
   - component: {fileID: 663229394214551392}
-  - component: {fileID: 663229394214551423}
+  - component: {fileID: 6565356192934515755}
   m_Layer: 0
   m_Name: Lava1
   m_TagString: Untagged
@@ -108,7 +108,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &663229394214551423
+--- !u!114 &6565356192934515755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,11 +117,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 663229394214551422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbe4c416944b404392d0cefeb1051a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 810fb2c1fef3baa4a8dac462531daaac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 7077501684581381953, guid: 9e0c7173542789645b40053227d3825b, type: 3}
+  - {fileID: -6449432729411920064, guid: 9e0c7173542789645b40053227d3825b, type: 3}
+  - {fileID: 8560943585161680478, guid: 9e0c7173542789645b40053227d3825b, type: 3}
+  - {fileID: -6217203577349033819, guid: 9e0c7173542789645b40053227d3825b, type: 3}
+  - {fileID: 7880594961592917993, guid: 9e0c7173542789645b40053227d3825b, type: 3}
+  - {fileID: 3263587284196595663, guid: 9e0c7173542789645b40053227d3825b, type: 3}
+  - {fileID: 580063022521796554, guid: 9e0c7173542789645b40053227d3825b, type: 3}
+  - {fileID: 4151158839354027119, guid: 9e0c7173542789645b40053227d3825b, type: 3}
   renderer: {fileID: 663229394214551394}
   currentIndex: 0
   activationIndex: 0
-  deactivationIndex: 2
+  deactivationIndex: 0

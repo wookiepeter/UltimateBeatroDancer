@@ -20,7 +20,7 @@ public class TileAnimator : MonoBehaviour, IBeatObserver
     void Start()
     {
         BeatController.GetInstance().BeatSubject.AddObserver(this);
-
+                
     }
 
     // Update is called once per frame
@@ -28,17 +28,17 @@ public class TileAnimator : MonoBehaviour, IBeatObserver
     {
     }
 
-    public void OnActivation()
+    public virtual void OnActivation()
     {
         // Debug.Log("Trap is active!");
     }
 
-    public void OnDeactivation()
+    public virtual void OnDeactivation()
     {
         // Debug.Log("Traps is inactive!");
     }
 
-    public void OffBeat(int offBeatCounter)
+    public virtual void OffBeat(int offBeatCounter)
     {
         if (offBeatCounter % 2 == 0)
         {
@@ -46,12 +46,12 @@ public class TileAnimator : MonoBehaviour, IBeatObserver
         }
     }
 
-    public void OnBeat()
+    public virtual void OnBeat()
     {
         UpdateTile();
     }
 
-    protected void UpdateTile()
+    protected virtual void UpdateTile()
     {
         currentIndex++;
         if(currentIndex >= sprites.Length)
