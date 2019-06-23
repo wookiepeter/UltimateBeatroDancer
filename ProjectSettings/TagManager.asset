@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - TileGrid
+  - ColliderMap
+  - TrapMap
+  - SpearTrap
   layers:
   - Default
   - TransparentFX
