@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: d9d7a0748474dda4d9881288bd7cbb1e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7320774823233551849
+    second: ComboBarBalken_0
+  - first:
+      213: 188059087526030582
+    second: ComboBarBalken_1
+  - first:
+      213: 1095438573674248588
+    second: ComboBarBalken_2
+  - first:
+      213: -5147321178547137177
+    second: ComboBarBalken_3
+  - first:
+      213: -6830253832269461181
+    second: ComboBarBalken_4
+  - first:
+      213: 9127025359101815396
+    second: ComboBarBalken_5
+  - first:
+      213: 8523028324490740501
+    second: ComboBarBalken_6
+  - first:
+      213: 7664454538144890359
+    second: ComboBarBalken_7
+  - first:
+      213: -64151653118513661
+    second: ComboBarBalken_8
+  - first:
+      213: 7743168131776726212
+    second: ComboBarBalken_9
+  - first:
+      213: -5110740598715691871
+    second: ComboBarBalken_10
+  - first:
+      213: 5510221416860686361
+    second: ComboBarBalken_11
+  - first:
+      213: -5899056714169427673
+    second: ComboBarBalken_12
+  - first:
+      213: -8975222427615575058
+    second: ComboBarBalken_13
+  - first:
+      213: -2571900748728098966
+    second: ComboBarBalken_14
+  - first:
+      213: 1401763732415385769
+    second: ComboBarBalken_15
+  - first:
+      213: -6519658097605914248
+    second: ComboBarBalken_16
+  - first:
+      213: -2147631870432535258
+    second: ComboBarBalken_17
+  - first:
+      213: -3958246153974035697
+    second: ComboBarBalken_18
+  - first:
+      213: 3592825880706577995
+    second: ComboBarBalken_19
+  - first:
+      213: 7066351856569863491
+    second: ComboBarBalken_-1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +103,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,7 +126,18 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -71,7 +145,448 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ComboBarBalken_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 475
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22148c4f3bcebab4881f4cab965b341a
+      internalID: -7320774823233551849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47db0148160594f43aff3f49c1d596c8
+      internalID: 188059087526030582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 425
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415cc5a8b0873674e81a76df3b8a93b4
+      internalID: 1095438573674248588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fa2ef8b12f23340a2769e295d1cdc1
+      internalID: -5147321178547137177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3803401ecd87e4dae447f2d3ea5a77
+      internalID: -6830253832269461181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6909fac7964495b4da736b47156ee271
+      internalID: 9127025359101815396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf564d2977527764d840ce8780fa312e
+      internalID: 8523028324490740501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc0b74db6cad624eb148a255bcb0a8b
+      internalID: 7664454538144890359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 275
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85ef5ffd04e22c4c936a255d6956ed9
+      internalID: -64151653118513661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5b68f929004b448a47cf89e62831fd
+      internalID: 7743168131776726212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec87963a0aa0e8418c8f5c17e4a7ec3
+      internalID: -5110740598715691871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18668c8e5d9242547aeb26dccfa17c7d
+      internalID: 5510221416860686361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fabc1a80c9617540b4bf93acceddaff
+      internalID: -5899056714169427673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b55284581e1f648b53deb3fe73d62b
+      internalID: -8975222427615575058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157a1ae79d9a3c0489de6ce063442722
+      internalID: -2571900748728098966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e4fc5e91920874b893726ca27c3a3f
+      internalID: 1401763732415385769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffb0377980b76142befd964039d2038
+      internalID: -6519658097605914248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7c29ba479c7c7469df5516978e75e3
+      internalID: -2147631870432535258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86d65973f4263e41a0434f32a7f19b2
+      internalID: -3958246153974035697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7304fcb288d1d4649a323b8980308b95
+      internalID: 3592825880706577995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBarBalken_-1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 111
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4715e41de63a24685b3a2b539f3cf2
+      internalID: 7066351856569863491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

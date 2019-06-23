@@ -98,6 +98,7 @@ MonoBehaviour:
   activationIndex: 0
   deactivationIndex: 0
   _image: {fileID: 740222558714891801}
+  slowAnimation: 0
 --- !u!1 &740222558769903268
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +266,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -7320774823233551849, guid: cb0b5113c5354164e8c67567adaab33e,
+  m_Sprite: {fileID: 7066351856569863491, guid: d9d7a0748474dda4d9881288bd7cbb1e,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -288,26 +289,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: -7320774823233551849, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 188059087526030582, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 1095438573674248588, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -5147321178547137177, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -6830253832269461181, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 9127025359101815396, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 8523028324490740501, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 7664454538144890359, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -64151653118513661, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 7743168131776726212, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -5110740598715691871, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 5510221416860686361, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -5899056714169427673, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -8975222427615575058, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -2571900748728098966, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 1401763732415385769, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -6519658097605914248, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -2147631870432535258, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -3958246153974035697, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 3592825880706577995, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
+  - {fileID: 7066351856569863491, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -7320774823233551849, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 188059087526030582, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 1095438573674248588, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -5147321178547137177, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -6830253832269461181, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 9127025359101815396, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 8523028324490740501, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 7664454538144890359, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -64151653118513661, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 7743168131776726212, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -5110740598715691871, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 5510221416860686361, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -5899056714169427673, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -8975222427615575058, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -2571900748728098966, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 1401763732415385769, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -6519658097605914248, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -2147631870432535258, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -3958246153974035697, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 3592825880706577995, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
   image: {fileID: 740222559031997604}
   currentIndex: 0
 --- !u!1 &740222559082548105
@@ -378,7 +380,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 8462998602277444585, guid: 921ac92644771cb4fbcd86690cecc534,
+  m_Sprite: {fileID: 8462998602277444585, guid: 703317ef3f0990c4cb12c9893143f707,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -401,15 +403,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 8462998602277444585, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
-  - {fileID: 1724088762076373172, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
-  - {fileID: 2738349171647063978, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
-  - {fileID: 5731652373033205472, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
+  - {fileID: 8462998602277444585, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
+  - {fileID: 1724088762076373172, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
+  - {fileID: 2738349171647063978, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
+  - {fileID: 5731652373033205472, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
   renderer: {fileID: 0}
   currentIndex: 0
   activationIndex: 0
   deactivationIndex: 0
   _image: {fileID: 740222559082548109}
+  slowAnimation: 0
 --- !u!114 &740222559082548111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,15 +429,15 @@ MonoBehaviour:
   player: {fileID: 0}
   comboBarAnimator: {fileID: 740222559340724642}
   hitSprites:
-  - {fileID: 8462998602277444585, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
-  - {fileID: 1724088762076373172, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
-  - {fileID: 2738349171647063978, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
-  - {fileID: 5731652373033205472, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
+  - {fileID: 8462998602277444585, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
+  - {fileID: 1724088762076373172, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
+  - {fileID: 2738349171647063978, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
+  - {fileID: 5731652373033205472, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
   missSprites:
-  - {fileID: 8967049564890453257, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
-  - {fileID: 9112736386941909081, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
-  - {fileID: -3515498422759159351, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
-  - {fileID: 3240585156768744577, guid: 921ac92644771cb4fbcd86690cecc534, type: 3}
+  - {fileID: 8967049564890453257, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
+  - {fileID: 9112736386941909081, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
+  - {fileID: -3515498422759159351, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
+  - {fileID: 3240585156768744577, guid: 703317ef3f0990c4cb12c9893143f707, type: 3}
 --- !u!1 &740222559276124011
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +506,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -4071744995683377349, guid: 66cfe5f3a1420c145966956ac2b527cd,
+  m_Sprite: {fileID: -4071744995683377349, guid: 03eb776bfd927624b8e797e642a3e7a9,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -526,15 +529,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: -4071744995683377349, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
-  - {fileID: 4703159075278228517, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
-  - {fileID: -9048071239708372329, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
-  - {fileID: -8730016585775201652, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
+  - {fileID: -4071744995683377349, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
+  - {fileID: 4703159075278228517, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
+  - {fileID: -9048071239708372329, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
+  - {fileID: -8730016585775201652, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
   renderer: {fileID: 0}
   currentIndex: 0
   activationIndex: 0
   deactivationIndex: 0
   _image: {fileID: 740222559276124008}
+  slowAnimation: 0
 --- !u!114 &740222559276124014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,15 +555,15 @@ MonoBehaviour:
   player: {fileID: 0}
   comboBarAnimator: {fileID: 740222559031997605}
   hitSprites:
-  - {fileID: -4071744995683377349, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
-  - {fileID: 4703159075278228517, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
-  - {fileID: -9048071239708372329, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
-  - {fileID: -8730016585775201652, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
+  - {fileID: -4071744995683377349, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
+  - {fileID: 4703159075278228517, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
+  - {fileID: -9048071239708372329, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
+  - {fileID: -8730016585775201652, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
   missSprites:
-  - {fileID: 331923360233363981, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
-  - {fileID: -2979707638367845003, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
-  - {fileID: -4665012774722045254, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
-  - {fileID: 6150660133323657220, guid: 66cfe5f3a1420c145966956ac2b527cd, type: 3}
+  - {fileID: 331923360233363981, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
+  - {fileID: -2979707638367845003, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
+  - {fileID: -4665012774722045254, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
+  - {fileID: 6150660133323657220, guid: 03eb776bfd927624b8e797e642a3e7a9, type: 3}
 --- !u!1 &740222559340724668
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +630,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -7320774823233551849, guid: cb0b5113c5354164e8c67567adaab33e,
+  m_Sprite: {fileID: 7066351856569863491, guid: d9d7a0748474dda4d9881288bd7cbb1e,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -649,25 +653,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: -7320774823233551849, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 188059087526030582, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 1095438573674248588, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -5147321178547137177, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -6830253832269461181, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 9127025359101815396, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 8523028324490740501, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 7664454538144890359, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -64151653118513661, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 7743168131776726212, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -5110740598715691871, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 5510221416860686361, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -5899056714169427673, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -8975222427615575058, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -2571900748728098966, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 1401763732415385769, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -6519658097605914248, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -2147631870432535258, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: -3958246153974035697, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
-  - {fileID: 3592825880706577995, guid: cb0b5113c5354164e8c67567adaab33e, type: 3}
+  - {fileID: 7066351856569863491, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -7320774823233551849, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 188059087526030582, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 1095438573674248588, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -5147321178547137177, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -6830253832269461181, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 9127025359101815396, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 8523028324490740501, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 7664454538144890359, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -64151653118513661, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 7743168131776726212, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -5110740598715691871, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 5510221416860686361, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -5899056714169427673, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -8975222427615575058, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -2571900748728098966, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 1401763732415385769, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -6519658097605914248, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -2147631870432535258, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: -3958246153974035697, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
+  - {fileID: 3592825880706577995, guid: d9d7a0748474dda4d9881288bd7cbb1e, type: 3}
   image: {fileID: 740222559340724641}
   currentIndex: 0
