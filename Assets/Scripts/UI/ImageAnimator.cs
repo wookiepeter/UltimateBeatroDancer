@@ -9,6 +9,8 @@ public class ImageAnimator : TileAnimator
     [SerializeField]
     protected Image _image;
 
+    public Sprite[] Sprites { get => sprites; set => sprites = value; }
+
     protected override void UpdateTile()
     {
         currentIndex++;
