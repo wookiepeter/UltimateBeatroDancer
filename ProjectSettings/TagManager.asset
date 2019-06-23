@@ -8,6 +8,9 @@ TagManager:
   - ColliderMap
   - TrapMap
   - SpearTrap
+  - TrapDoor
+  - SpikeTrap
+  - Lava
   layers:
   - Default
   - TransparentFX

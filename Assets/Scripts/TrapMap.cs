@@ -28,7 +28,6 @@ public class TrapMap : MonoBehaviour
             {
                 AddGameObjectToDictionary(gameObject, cellPos);
             }
-
         }
     }
 

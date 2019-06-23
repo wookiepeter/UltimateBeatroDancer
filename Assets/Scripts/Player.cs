@@ -30,6 +30,10 @@ public class Player : TileAnimator
     private Sprite[] downWardsAnim;
     [SerializeField]
     private Sprite[] leftAnim;
+    [SerializeField]
+    private Sprite[] deatAnim;
+    [SerializeField]
+    private Sprite[] trapDoorAnim;
 
     [SerializeField]
     EDirection _currentDirection = EDirection.UP;
@@ -39,6 +43,8 @@ public class Player : TileAnimator
     bool targetBlocked = false;
     int _currentOffBeatCounter = 0;
     SpawnPlayer spawner = null;
+
+    bool isDead;
     
 
     BeatController _beatController;
@@ -186,6 +192,31 @@ public class Player : TileAnimator
         changeDirection(_currentDirection);
         Debug.Log("Changing Direction");
         */
+
+        if(isDead)
+        {
+            
+        }
+
+        foreach(GameObject gameObject in currentTrapTileList)
+        {
+            Debug.Log("Currently on trap " + gameObject.name);
+            switch(gameObject.tag)
+            {
+                case "TrapDoor":
+                    sprites = trapDoorAnim;
+                    break;
+                case "SpikeTrap":
+                    sprites = deatAnim;
+                    break;
+                case "Lava":
+                    sprites = deatAnim;
+                    break;
+                case "SpearTrap":
+                    sprites = deatAnim;
+                    break;
+            }
+        }
         base.OnBeat();
     }
 

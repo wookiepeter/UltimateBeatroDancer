@@ -104,6 +104,8 @@ MonoBehaviour:
   deactivationIndex: 0
   playerIndex: 0
   comboBarController: {fileID: 0}
+  grid: {fileID: 0}
+  position: {x: 0, y: 0}
   upWardsAnim:
   - {fileID: 307306207660225147, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
   - {fileID: 3764462124591753474, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
@@ -124,4 +126,14 @@ MonoBehaviour:
   - {fileID: -2533959699903674593, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
   - {fileID: 2472461404737089718, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
   - {fileID: 461195024157024834, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
+  deatAnim:
+  - {fileID: 6478450544714774287, guid: 6bbefb72c96b26f488d5f6e7633377a6, type: 3}
+  - {fileID: 8333341232733538335, guid: 6bbefb72c96b26f488d5f6e7633377a6, type: 3}
+  - {fileID: 3191659985022049673, guid: 6bbefb72c96b26f488d5f6e7633377a6, type: 3}
+  - {fileID: -5530459500378885220, guid: 6bbefb72c96b26f488d5f6e7633377a6, type: 3}
+  trapDoorAnim:
+  - {fileID: -4768785674582939206, guid: 150a58b3211282e49af854d8565f3312, type: 3}
+  - {fileID: -5831464923717223463, guid: 150a58b3211282e49af854d8565f3312, type: 3}
+  - {fileID: -9072415395509001557, guid: 150a58b3211282e49af854d8565f3312, type: 3}
+  - {fileID: 1320698835856672812, guid: 150a58b3211282e49af854d8565f3312, type: 3}
   _currentDirection: 2
