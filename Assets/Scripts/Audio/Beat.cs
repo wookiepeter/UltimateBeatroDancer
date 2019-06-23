@@ -8,6 +8,8 @@ public class Beat : System.IFormattable
     float _beatTimeDiff;
     float _beatStart;
     float _bpm;
+    
+    float offset = 0.1f;
 
     int _beatCounter;
     float _nextBeatTime;
@@ -33,7 +35,7 @@ public class Beat : System.IFormattable
     public void reset()
     {
         _beatCounter = 0;
-        _nextBeatTime = BeatStart;
+        _nextBeatTime = BeatStart + offset;
         _lastBeatTime = _nextBeatTime;
     } 
 
@@ -48,7 +50,7 @@ public class Beat : System.IFormattable
         {
             _beatCounter++;
             _lastBeatTime = _nextBeatTime;
-            _nextBeatTime = _beatStart + _beatCounter * 0.125f * BeatTimeDiff;
+            _nextBeatTime = _beatStart + _beatCounter * 0.125f * BeatTimeDiff + offset;
             return _beatCounter % 8;
         }
 
