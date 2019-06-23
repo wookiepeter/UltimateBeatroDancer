@@ -1,31 +1,7 @@
 fileFormatVersion: 2
-guid: 66cfe5f3a1420c145966956ac2b527cd
+guid: 03eb776bfd927624b8e797e642a3e7a9
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4071744995683377349
-    second: ComboBar_P1_0
-  - first:
-      213: 4703159075278228517
-    second: ComboBar_P1_1
-  - first:
-      213: -9048071239708372329
-    second: ComboBar_P1_2
-  - first:
-      213: -8730016585775201652
-    second: ComboBar_P1_3
-  - first:
-      213: 331923360233363981
-    second: ComboBar_P1_4
-  - first:
-      213: -2979707638367845003
-    second: ComboBar_P1_5
-  - first:
-      213: -4665012774722045254
-    second: ComboBar_P1_6
-  - first:
-      213: 6150660133323657220
-    second: ComboBar_P1_7
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -55,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -64,12 +40,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,18 +63,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,179 +71,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: ComboBar_P1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 175
-        width: 111
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21908dbc4a892ef49ae70b56299ee38b
-      internalID: -4071744995683377349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ComboBar_P1_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 150
-        width: 111
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea828e46b26bb994ba26b348c49b94ef
-      internalID: 4703159075278228517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ComboBar_P1_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 125
-        width: 111
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc26ef49020532c43b2f27940bc0abad
-      internalID: -9048071239708372329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ComboBar_P1_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 100
-        width: 111
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bea49ee826a2eca48bf36e84745e3827
-      internalID: -8730016585775201652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ComboBar_P1_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 75
-        width: 111
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aef58c7e64f68be4aa3927cfdd3547f4
-      internalID: 331923360233363981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ComboBar_P1_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 50
-        width: 111
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0747ac8d2fb5df44b8d6fc0905bb3a9a
-      internalID: -2979707638367845003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ComboBar_P1_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 25
-        width: 111
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86d88e746475a4149a919f740add47e8
-      internalID: -4665012774722045254
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ComboBar_P1_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 111
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c56dd4ad72d0c6043a1a6a7dd8f324b1
-      internalID: 6150660133323657220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a1323a8b1a29b4c4ba6da9206b4ecdaa
+    spriteID: cd3da83dbaa3c114c98d5b838fabd853
     internalID: 0
     vertices: []
     indices: 

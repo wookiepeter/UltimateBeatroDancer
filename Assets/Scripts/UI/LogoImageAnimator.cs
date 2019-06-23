@@ -3,17 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ImageAnimator : TileAnimator 
+public class LogoImageAnimator : ImageAnimator
 {
-
-    [SerializeField]
-    protected Image _image;
-
-    public Sprite[] Sprites { get => sprites; set => sprites = value; }
-
-    [SerializeField]
-    protected bool slowAnimation;
-    
 
     protected override void UpdateTile()
     {
@@ -45,5 +36,15 @@ public class ImageAnimator : TileAnimator
                 UpdateTile();
             }
         }
+        else
+        {
+            if (offBeatCounter < 2)
+            {
+                transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+            } else
+            {
+                transform.localScale = Vector3.one;
+            }
+        }  
     }
 }
