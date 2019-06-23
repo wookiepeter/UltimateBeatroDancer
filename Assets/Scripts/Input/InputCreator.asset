@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d7f43a75378854f9bc1e4160153c57, type: 3}
+  m_Name: InputCreator
+  m_EditorClassIdentifier: 
+  _numJoysticks: 4
+  _ignoreCount: 20
+  _generateKeyboardInput: 1
+  _axisGravity: 0
+  _axisDead: 0.19
+  _axisSensitivity: 1
+  _invertY: 0
+  _invertX: 0
+  _moveAxisXName: move_x
+  _moveAxisYName: move_y
+  _viewAxisXName: view_x
+  _viewAxisYName: view_y
+  _leftTriggerName: left_trigger
+  _rightTriggerName: right_trigger
+  _buttonAxisGravity: 1000
+  _buttonAxisDead: 0.001
+  _buttonAxisSensitivity: 1000
+  _buttonNames:
+  - a
+  - b
+  - x
+  - y
+  - left_bumper
+  - right_bumper
+  - back
+  - start
+  - left_stick
+  - right_stick
+  _p0KeyboardButtons:
+  - s
+  - d
+  - a
+  - w
+  - left ctrl
+  - space
+  - r
+  - tab
+  - f
+  - h
+  _p0KeyMoveHorizontalPos: 1
+  _p0KeyMoveHorizontalNeg: 2
+  _p0KeyMoveVerticalPos: 3
+  _p0KeyMoveVerticalNeg: 4
+  _p0KeyViewHorizontalPos: 5
+  _p0KeyViewHorizontalNeg: 6
+  _p0KeyViewVerticalPos: 7
+  _p0KeyViewVerticalNeg: 8
+  _p1KeyboardButtons:
+  - k
+  - l
+  - j
+  - i
+  - right ctrl
+  - backspace
+  - '[plus]'
+  - enter
+  - '[*]'
+  - '[2]'
+  _p1KeyMoveHorizontalPos: y
+  _p1KeyMoveHorizontalNeg: x
+  _p1KeyMoveVerticalPos: c
+  _p1KeyMoveVerticalNeg: v
+  _p1KeyViewHorizontalPos: '[6]'
+  _p1KeyViewHorizontalNeg: '[4]'
+  _p1KeyViewVerticalPos: '[5]'
+  _p1KeyViewVerticalNeg: '[8]'

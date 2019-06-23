@@ -20,7 +20,7 @@ public class TileAnimator : MonoBehaviour, IBeatObserver
     void Start()
     {
         BeatController.GetInstance().BeatSubject.AddObserver(this);
-                
+        // Debug.Log("Starting animation for " + gameObject.name);
     }
 
     // Update is called once per frame

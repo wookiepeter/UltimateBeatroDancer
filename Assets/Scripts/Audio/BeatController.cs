@@ -17,6 +17,9 @@ public class BeatController : MonoBehaviour
     [SerializeField]
     [Range(0.5f, 8f)]
     float _playSpeed = 1f;
+    [SerializeField]
+    [Range(0.05f, 0.5f)]
+    float beatInputWindow = 0.12f;
 
     Beat _beat;
     BeatLabelProcessorParams _oldBeatLabelProcessorParams;
@@ -44,8 +47,6 @@ public class BeatController : MonoBehaviour
 
         instance = this;
     }
-
-    
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +86,12 @@ public class BeatController : MonoBehaviour
             _audioSource.clip = _audioClip;
             _audioSource.Play();
         }
+    }
+
+    public bool CurrentlyInInputWindow()
+    {
+        Debug.Log("Time To Beat" + _beat.getTimeToClosestBeat(_audioSource.time) + " - BeatInputWindow: " + beatInputWindow);
+        return (_beat.getTimeToClosestBeat(_audioSource.time) < beatInputWindow);
     }
 
     void updateBeatprocessor()

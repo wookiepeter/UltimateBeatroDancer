@@ -11,6 +11,7 @@ public class Beat : System.IFormattable
 
     int _beatCounter;
     float _nextBeatTime;
+    float _lastBeatTime;
     
     public Beat(float beatTimeDiff, float beatStart) 
     {
@@ -33,15 +34,20 @@ public class Beat : System.IFormattable
     {
         _beatCounter = 0;
         _nextBeatTime = BeatStart;
+        _lastBeatTime = _nextBeatTime;
     } 
 
-
+    public float getTimeToClosestBeat(float songTime)
+    {
+        return Mathf.Min(Mathf.Abs(songTime - _nextBeatTime), Mathf.Abs(songTime - _nextBeatTime));
+    }
 
     public int UpdateBeat(float songTime)
     {
         if (songTime > _nextBeatTime)
         {
             _beatCounter++;
+            _lastBeatTime = _nextBeatTime;
             _nextBeatTime = _beatStart + _beatCounter * 0.125f * BeatTimeDiff;
             return _beatCounter % 8;
         }
