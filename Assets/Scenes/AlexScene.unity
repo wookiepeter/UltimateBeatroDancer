@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 18082090}
   - component: {fileID: 18082089}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,15 +237,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: jump on the trapdoor to start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d0e45d4d5b899274ba07f9d321f25b8c, type: 2}
+  m_sharedMaterial: {fileID: 3981232461248815710, guid: d0e45d4d5b899274ba07f9d321f25b8c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283090787
+  m_fontColor: {r: 0.38823533, g: 0.7803922, b: 0.2901961, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -263,13 +264,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -360,7 +361,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  - {fileID: 3981232461248815710, guid: d0e45d4d5b899274ba07f9d321f25b8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1357,7 +1358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &686399400
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2022,6 +2023,7 @@ MonoBehaviour:
   activationIndex: 0
   deactivationIndex: 0
   playerIndex: 0
+  comboBarController: {fileID: 0}
   upWardsAnim:
   - {fileID: 307306207660225147, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
   - {fileID: 3764462124591753474, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
@@ -2078,7 +2080,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -291534471
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 5900867980283905539, guid: c19b52c0dfe032e4db6f2e1ed8743a56,
     type: 3}
@@ -2759,10 +2761,10 @@ RectTransform:
   m_Father: {fileID: 741533467}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 71.6}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443680124
 MonoBehaviour:
@@ -2773,7 +2775,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443680122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d63753ee023140445ac71e220bd5c3ca, type: 3}
+  m_Script: {fileID: 11500000, guid: e933ba71d35b7534d9e21b1490034896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
@@ -2786,7 +2788,7 @@ MonoBehaviour:
   activationIndex: 0
   deactivationIndex: 0
   _image: {fileID: 1443680125}
-  slowAnimation: 0
+  slowAnimation: 1
 --- !u!114 &1443680125
 MonoBehaviour:
   m_ObjectHideFlags: 0
