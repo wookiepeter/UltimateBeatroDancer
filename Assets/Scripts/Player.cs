@@ -29,7 +29,8 @@ public class Player : TileAnimator
     EDirection _nextDirection = EDirection.NONE;
     EDirection _currentlyQueuedDirection = EDirection.NONE;
     bool targetBlocked = false;
-    int _currentOffBeatCounter = 0; 
+    int _currentOffBeatCounter = 0;
+    SpawnPlayer spawner = null;
     
 
     BeatController _beatController;
@@ -49,6 +50,11 @@ public class Player : TileAnimator
     void Update()
     {
         HandleInput();
+    }
+
+    public void SetSpawner(SpawnPlayer spawner)
+    {
+        this.spawner = spawner;
     }
 
     void HandleInput()

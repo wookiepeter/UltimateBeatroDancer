@@ -124,4 +124,4 @@ MonoBehaviour:
   - {fileID: -2533959699903674593, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
   - {fileID: 2472461404737089718, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
   - {fileID: 461195024157024834, guid: c19b52c0dfe032e4db6f2e1ed8743a56, type: 3}
-  _currentDirection: 0
+  _currentDirection: 2
