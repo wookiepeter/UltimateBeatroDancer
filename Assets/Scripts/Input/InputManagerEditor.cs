@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace ControllerInputCreator
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(InputCreator))]
     public class InputCreatorManager : Editor
     {
@@ -17,4 +18,5 @@ namespace ControllerInputCreator
             }
         }
     }
+#endif
 }

@@ -1838,9 +1838,10 @@ GameObject:
   - component: {fileID: 1078499425}
   - component: {fileID: 1078499427}
   - component: {fileID: 1078499426}
+  - component: {fileID: 1078499428}
   m_Layer: 0
   m_Name: TrapMap
-  m_TagString: TrapDoor
+  m_TagString: TrapMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2009,6 +2010,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1078499428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078499424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a879e761f10954dab9b19d00758504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1093118675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 663229394214551395, guid: 81497ccf7ca02034d9a1856ed9ab8d16,
@@ -7208,16 +7221,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 740222559082548111, guid: 5485578bff06f774a8babe270f7f2ef2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 740222559276124014, guid: 5485578bff06f774a8babe270f7f2ef2,
-        type: 3}
-      propertyPath: player
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5485578bff06f774a8babe270f7f2ef2, type: 3}

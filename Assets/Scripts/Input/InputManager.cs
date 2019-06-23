@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public enum EDirection
 {
@@ -40,7 +42,10 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (_inputRequester.InputButtonDown(EInputButtons.Start))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     public EDirection GetDirectionInputForPlayer(int playerIndex)

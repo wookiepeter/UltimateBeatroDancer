@@ -36,7 +36,7 @@ public class Player : TileAnimator
     private Sprite[] trapDoorAnim;
 
     [SerializeField]
-    EDirection _currentDirection = EDirection.UP;
+    EDirection _currentDirection = EDirection.DOWN;
 
     EDirection _nextDirection = EDirection.NONE;
     EDirection _currentlyQueuedDirection = EDirection.NONE;
@@ -53,6 +53,11 @@ public class Player : TileAnimator
     List<GameObject> currentTrapTileList;
 
     private void Awake()
+    {
+        calculatePosition();
+    }
+
+    public void calculatePosition()
     {
         position = new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.y));
     }
@@ -98,7 +103,7 @@ public class Player : TileAnimator
         }
         else
         {
-            Debug.Log("Currently not in Input window -> invalid button press!");
+            //Debug.Log("Currently not in Input window -> invalid button press!");
         }
     }
 
@@ -122,6 +127,12 @@ public class Player : TileAnimator
         if (offBeatCounter == 7)
         {
             comboBarController.ResetIndicator();
+            if (isDead)
+            {
+                BeatController.GetInstance().BeatSubject.RemoveObserver(this);
+                this.spawner.activate();
+                Destroy(this.gameObject);
+            }
         } 
     }
 
@@ -193,21 +204,29 @@ public class Player : TileAnimator
         Debug.Log("Changing Direction");
         */
 
-        if(isDead)
+        if (isDead)
         {
-            
+            //this.enabled = false;
+            //this.GetComponent<TileAnimator>().enabled = false;
+            //this.get
+            Debug.Log("isdead");
+            BeatController.GetInstance().BeatSubject.RemoveObserver(this);
+            Destroy(this.gameObject);
         }
+        base.OnBeat();
+    
 
-        foreach(GameObject gameObject in currentTrapTileList)
+        foreach (GameObject gameObject in currentTrapTileList)
         {
             Debug.Log("Currently on trap " + gameObject.name);
-            switch(gameObject.tag)
+            switch (gameObject.tag)
             {
                 case "TrapDoor":
                     sprites = trapDoorAnim;
                     break;
                 case "SpikeTrap":
                     sprites = deatAnim;
+
                     break;
                 case "Lava":
                     sprites = deatAnim;
@@ -216,10 +235,9 @@ public class Player : TileAnimator
                     sprites = deatAnim;
                     break;
             }
+            isDead = true;
         }
-        base.OnBeat();
     }
-
     // should be called on Beat!
     void changeDirection(EDirection direction)
     {
