@@ -27,6 +27,7 @@ public class Player : TileAnimator
     EDirection _currentDirection = EDirection.UP;
 
     EDirection _nextDirection = EDirection.NONE;
+    EDirection _currentlyQueuedDirection = EDirection.NONE;
     bool targetBlocked = false;
     int _currentOffBeatCounter = 0; 
     
@@ -54,39 +55,20 @@ public class Player : TileAnimator
     {
         EDirection direction = _inputManager.GetDirectionInputForPlayer(playerIndex);
 
-        if (direction != EDirection.NONE)
-        {
-            Debug.Log("Received Direction");
-            HandleInputDirectionPress(direction);
-        }
+        HandleInputDirectionPress(direction);
     }
 
     void HandleInputDirectionPress(EDirection direction)
     {
-        if (_nextDirection == EDirection.NONE && _beatController.CurrentlyInInputWindow() && _currentOffBeatCounter < 2)
+        if (direction != EDirection.NONE)
         {
             Debug.Log("Received valid inputdirection: " + _nextDirection.ToString());
-            comboBarController.SetBar(true);
-            startMovement(direction);
+            _currentlyQueuedDirection = direction;
         }
         else
         {
-            comboBarController.SetBar(false);
-            if (_nextDirection != EDirection.NONE)
-            {
-                Debug.Log("Next move was already set -> Invalid Input! -> You lose some focus");
-            }
-            else
-            {
-                Debug.Log("Currently not in Input window -> invalid button press!");
-            }
+            Debug.Log("Currently not in Input window -> invalid button press!");
         }
-    }
-
-    void startMovement(EDirection direction)
-    {
-        _nextDirection = direction;
-        changeDirection(_nextDirection);
     }
 
     public override void OffBeat(int offBeatCounter)
@@ -94,10 +76,29 @@ public class Player : TileAnimator
         _currentOffBeatCounter = offBeatCounter;
         MovePlayer(offBeatCounter);
         base.OffBeat(offBeatCounter);
+        if(offBeatCounter == 1)
+        { 
+            if(_currentlyQueuedDirection != EDirection.NONE)
+            {
+                startMovement();
+                comboBarController.SetBar(true);
+            }
+            else
+            {
+                comboBarController.SetBar(false);
+            }
+        }
         if (offBeatCounter == 7)
         {
             comboBarController.ResetIndicator();
         } 
+    }
+
+    void startMovement()
+    {
+        _nextDirection = _currentlyQueuedDirection;
+        _currentlyQueuedDirection = EDirection.NONE;
+        changeDirection(_nextDirection);
     }
 
     void MovePlayer(int offBeatCounter)
