@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Player : TileAnimator
 {
@@ -12,6 +13,13 @@ public class Player : TileAnimator
     int playerIndex;
     [SerializeField]
     ComboBarController comboBarController;
+    [SerializeField]
+    Grid grid;
+    Tilemap collisionMap;
+    TrapMap trapMap;
+    
+    [SerializeField]
+    Vector2Int position; 
 
     [Header("Player Animation")]
     [SerializeField]
@@ -36,6 +44,13 @@ public class Player : TileAnimator
     BeatController _beatController;
     InputManager _inputManager;
 
+    List<GameObject> currentTrapTileList;
+
+    private void Awake()
+    {
+        position = new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.y));
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +59,10 @@ public class Player : TileAnimator
         _inputManager = InputManager.GetInstance();
         changeDirection(_currentDirection);
         Debug.Log("Starting animation");
+        grid = GameObject.FindGameObjectWithTag("TileGrid").GetComponent<Grid>();
+        collisionMap = GameObject.FindGameObjectWithTag("ColliderMap").GetComponent<Tilemap>();
+        trapMap = GameObject.FindGameObjectWithTag("TrapMap").GetComponent<TrapMap>();
+        currentTrapTileList = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -105,6 +124,29 @@ public class Player : TileAnimator
         _nextDirection = _currentlyQueuedDirection;
         _currentlyQueuedDirection = EDirection.NONE;
         changeDirection(_nextDirection);
+        Vector2Int nextTilePos = position + _inputManager.GetVector(_nextDirection);
+        Vector3Int nextPos = grid.LocalToCell(new Vector3(nextTilePos.x, nextTilePos.y));
+        TileBase tile = collisionMap.GetTile(nextPos);
+        if(tile != null)
+        {
+            Debug.Log("Tile should be blocked: " + tile.ToString());
+            targetBlocked = true;
+        }
+        else
+        {
+            currentTrapTileList.Clear();
+            position = nextTilePos;
+            if(trapMap.TileHasTrap(nextPos))
+            {
+                GameObject trapTile = trapMap.GetTrapTileList(nextPos)[0];
+                Debug.Log("trapTile: " + (trapTile != null));
+
+                if (trapTile != null)
+                {
+                    currentTrapTileList = trapMap.GetTrapTileList(nextPos);
+                }  
+            }
+        }
     }
 
     void MovePlayer(int offBeatCounter)
