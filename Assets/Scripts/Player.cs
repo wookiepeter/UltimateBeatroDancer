@@ -10,6 +10,8 @@ public class Player : TileAnimator
 
     [SerializeField]
     int playerIndex;
+    [SerializeField]
+    ComboBarController comboBarController;
 
     [Header("Player Animation")]
     [SerializeField]
@@ -64,11 +66,13 @@ public class Player : TileAnimator
         if (_nextDirection == EDirection.NONE && _beatController.CurrentlyInInputWindow() && _currentOffBeatCounter < 2)
         {
             Debug.Log("Received valid inputdirection: " + _nextDirection.ToString());
+            comboBarController.SetBar(true);
             startMovement(direction);
         }
         else
         {
-            if(_nextDirection != EDirection.NONE)
+            comboBarController.SetBar(false);
+            if (_nextDirection != EDirection.NONE)
             {
                 Debug.Log("Next move was already set -> Invalid Input! -> You lose some focus");
             }
@@ -90,6 +94,10 @@ public class Player : TileAnimator
         _currentOffBeatCounter = offBeatCounter;
         MovePlayer(offBeatCounter);
         base.OffBeat(offBeatCounter);
+        if (offBeatCounter == 7)
+        {
+            comboBarController.ResetIndicator();
+        } 
     }
 
     void MovePlayer(int offBeatCounter)
