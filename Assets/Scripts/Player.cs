@@ -94,6 +94,10 @@ public class Player : TileAnimator
         _currentOffBeatCounter = offBeatCounter;
         MovePlayer(offBeatCounter);
         base.OffBeat(offBeatCounter);
+        if (offBeatCounter == 7)
+        {
+            comboBarController.ResetIndicator();
+        } 
     }
 
     void MovePlayer(int offBeatCounter)

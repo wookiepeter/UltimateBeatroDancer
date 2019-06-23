@@ -39,7 +39,7 @@ public class Beat : System.IFormattable
 
     public float getTimeToClosestBeat(float songTime)
     {
-        return Mathf.Min(Mathf.Abs(songTime - _nextBeatTime), Mathf.Abs(songTime - _nextBeatTime));
+        return Mathf.Min(Mathf.Abs(songTime - _nextBeatTime), Mathf.Abs(songTime - _lastBeatTime));
     }
 
     public int UpdateBeat(float songTime)

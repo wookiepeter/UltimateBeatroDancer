@@ -8,6 +8,8 @@ public class ComboBarController : MonoBehaviour
     ImageAnimator imageAnimator;
     [SerializeField]
     Player player;
+    [SerializeField]
+    ComboBarAnimator comboBarAnimator;
 
     [SerializeField]
     Sprite[] hitSprites;
@@ -16,15 +18,21 @@ public class ComboBarController : MonoBehaviour
 
     public void SetBar(bool hitBeat)
     {
-        if(hitBeat = true)
+        if(hitBeat)
         {
             imageAnimator.Sprites = hitSprites;
-
+            comboBarAnimator.ChangeComboAmount(1);
         }
         else
         {
             imageAnimator.Sprites = missSprites;
+            comboBarAnimator.ChangeComboAmount(-1);
         }
+    }
+
+    public void ResetIndicator()
+    {
+        imageAnimator.Sprites = hitSprites;
     }
 
     // Start is called before the first frame update
