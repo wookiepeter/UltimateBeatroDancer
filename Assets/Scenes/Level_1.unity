@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 73290520}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: TileGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1619,9 +1619,10 @@ GameObject:
   - component: {fileID: 1078499425}
   - component: {fileID: 1078499427}
   - component: {fileID: 1078499426}
+  - component: {fileID: 1078499428}
   m_Layer: 0
   m_Name: TrapMap
-  m_TagString: Untagged
+  m_TagString: TrapMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1774,6 +1775,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1078499428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078499424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a879e761f10954dab9b19d00758504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1148032968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2238,7 +2251,7 @@ GameObject:
   - component: {fileID: 1534922588}
   m_Layer: 0
   m_Name: ColliderMap
-  m_TagString: Untagged
+  m_TagString: ColliderMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

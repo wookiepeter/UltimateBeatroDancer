@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 73290520}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: TileGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1840,7 +1840,7 @@ GameObject:
   - component: {fileID: 1078499426}
   m_Layer: 0
   m_Name: TrapMap
-  m_TagString: Untagged
+  m_TagString: TrapDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2715,7 +2715,7 @@ GameObject:
   - component: {fileID: 1534922588}
   m_Layer: 0
   m_Name: ColliderMap
-  m_TagString: Untagged
+  m_TagString: ColliderMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
