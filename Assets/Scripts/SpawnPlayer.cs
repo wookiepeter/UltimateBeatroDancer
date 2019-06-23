@@ -7,25 +7,44 @@ public class SpawnPlayer : MonoBehaviour, IBeatObserver
     [SerializeField]
     private Player playerToSpawn;
 
-    private int initialOffset = 9;
+    [SerializeField]
+    private ComboBarController comboBar;
+
+    private int initialOffset = 16;
     private int currentBeat = 0;
 
+    
+
     public void OffBeat(int offBeatCounter)
+    { 
+    
+        if (currentBeat != -1)
+            currentBeat += 1;
+
+        if (currentBeat >= initialOffset && currentBeat != -1)
+        {
+            currentBeat = -1;
+            Player player = GameObject.Instantiate(playerToSpawn);
+            player.SetSpawner(this);
+            player.transform.position = this.transform.position;
+            player.transform.parent = this.transform;
+            GetComponent<TileAnimator>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            player.comboBarController = this.comboBar;
+        }
+        // throw new System.NotImplementedException();
+    }
+
+    public void activate()
     {
-       // throw new System.NotImplementedException();
+        currentBeat = -1;
+        this.GetComponent<TileAnimator>().enabled = true;
+        this.GetComponent<SpriteRenderer>().enabled = true;
     }
 
     public void OnBeat()
     {
-        currentBeat += 1;
-        if (currentBeat >= initialOffset)
-        {
-            currentBeat = 0;
-            Player player = GameObject.Instantiate(playerToSpawn);
-            player.SetSpawner(this);
-            player.transform.position = this.transform.position;
-            enabled = false;
-        }
+       
         //throw new System.NotImplementedException();
     }
 

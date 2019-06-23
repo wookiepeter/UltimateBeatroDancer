@@ -12,7 +12,7 @@ public class Player : TileAnimator
     [SerializeField]
     int playerIndex;
     [SerializeField]
-    ComboBarController comboBarController;
+    public ComboBarController comboBarController;
     [SerializeField]
     Grid grid;
     Tilemap collisionMap;
