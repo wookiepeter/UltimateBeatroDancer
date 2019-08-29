@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: fd0109388effdce46b79330e86beee83
+guid: 708ee28ea05a5474eb6cb961895f63f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -780988360300046718
-    second: SpearTrap_0
+      213: 3280138244286926681
+    second: PlayerSpawn_P1_0
   - first:
-      213: 7140113988375968279
-    second: SpearTrap_1
+      213: -1178965454546350818
+    second: PlayerSpawn_P1_1
   - first:
-      213: -1530297551261916711
-    second: SpearTrap_2
+      213: 6822628636223485477
+    second: PlayerSpawn_P1_2
   - first:
-      213: -6692151432624854806
-    second: SpearTrap_3
+      213: -6036672398532524740
+    second: PlayerSpawn_P1_3
   - first:
-      213: 4781506514069067087
-    second: SpearTrap_4
+      213: 7817605061198196009
+    second: PlayerSpawn_P1_4
   - first:
-      213: 8659855412735320720
-    second: SpearTrap_5
+      213: -5985690699796437458
+    second: PlayerSpawn_P1_5
   - first:
-      213: -9002694824568986395
-    second: SpearTrap_6
+      213: -1613568896159861582
+    second: PlayerSpawn_P1_6
   - first:
-      213: -3472291416900189508
-    second: SpearTrap_7
+      213: 1485903751803644534
+    second: PlayerSpawn_P1_7
+  - first:
+      213: 5217135151665358807
+    second: PlayerSpawn_P1_8
+  - first:
+      213: 4196191104629487561
+    second: PlayerSpawn_P1_9
+  - first:
+      213: -380591377090174674
+    second: PlayerSpawn_P1_10
+  - first:
+      213: 4536200889380258094
+    second: PlayerSpawn_P1_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -87,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +110,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,169 +120,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpearTrap_0
+      name: PlayerSpawn_P1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07167c58941dbbd41bc5327ef617d04e
-      internalID: -780988360300046718
+      spriteID: 250cb5fa068b68440ba6141fe6d442ba
+      internalID: 3280138244286926681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpearTrap_1
+      name: PlayerSpawn_P1_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c6be41db4523a546ae13da7f8ba887a
-      internalID: 7140113988375968279
+      spriteID: f02bf1d01346d224abe54d0d99b219c4
+      internalID: -1178965454546350818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpearTrap_2
+      name: PlayerSpawn_P1_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85a35fc41c19fef4a9e4426d1f911268
-      internalID: -1530297551261916711
+      spriteID: 876da7476eb8b0840afec7805b718e4d
+      internalID: 6822628636223485477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpearTrap_3
+      name: PlayerSpawn_P1_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26646f5b1a543e54280b09fe0b9c4993
-      internalID: -6692151432624854806
+      spriteID: 6bc3eb414f6e80f43becc7a303904a97
+      internalID: -6036672398532524740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpearTrap_4
+      name: PlayerSpawn_P1_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb2e27c861d0aef4a946f4b502460e9e
-      internalID: 4781506514069067087
+      spriteID: 9f001e0bde0ea6347be7d10891a48da8
+      internalID: 7817605061198196009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpearTrap_5
+      name: PlayerSpawn_P1_5
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd680d2061bcbad42864fe5b75919ebd
-      internalID: 8659855412735320720
+      spriteID: 7a119d99e5529b8479c440ae52adeb0f
+      internalID: -5985690699796437458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpearTrap_6
+      name: PlayerSpawn_P1_6
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 343fca8590552de4fb58f990c2a5c080
-      internalID: -9002694824568986395
+      spriteID: 3c86ab559da9797499c1b4a438c81d2b
+      internalID: -1613568896159861582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpearTrap_7
+      name: PlayerSpawn_P1_7
       rect:
         serializedVersion: 2
         x: 112
         y: 0
         width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 117db5120367e304c8230dbd7b59cee6
-      internalID: -3472291416900189508
+      spriteID: 084ea5c6ec88dfe4ab45a95791df3fbb
+      internalID: 1485903751803644534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpawn_P1_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8c62a4d72fa1944a62559b66b03242
+      internalID: 5217135151665358807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpawn_P1_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f57ee8fa9437144d80a3639b8d54a9e
+      internalID: 4196191104629487561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpawn_P1_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20413e32bfe529d488079c10891d3b13
+      internalID: -380591377090174674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpawn_P1_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c304afb40069654e841e6c5e8ac01d8
+      internalID: 4536200889380258094
       vertices: []
       indices: 
       edges: []
@@ -278,7 +374,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: faa74497e533713428e99328bbc41df5
+    spriteID: 4ff501fd9c0f9ee45aeafdcc156820db
     internalID: 0
     vertices: []
     indices: 

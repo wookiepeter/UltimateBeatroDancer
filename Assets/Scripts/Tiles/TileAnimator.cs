@@ -16,6 +16,8 @@ public class TileAnimator : MonoBehaviour, IBeatObserver
     [SerializeField]
     protected int deactivationIndex;
 
+    public bool isActive { get; private set; } = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,11 +33,13 @@ public class TileAnimator : MonoBehaviour, IBeatObserver
     public virtual void OnActivation()
     {
         // Debug.Log("Trap is active!");
+        isActive = true;
     }
 
     public virtual void OnDeactivation()
     {
         // Debug.Log("Traps is inactive!");
+        isActive = false;
     }
 
     public virtual void OffBeat(int offBeatCounter)

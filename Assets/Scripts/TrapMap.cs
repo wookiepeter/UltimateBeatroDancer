@@ -50,7 +50,7 @@ public class TrapMap : MonoBehaviour
 
     public List<GameObject> GetTrapTileList(Vector3Int position)
     {
-        return trapMap[position];
+        return new List<GameObject>(trapMap[position]);
     }
 
     // Update is called once per frame

@@ -132,4 +132,4 @@ MonoBehaviour:
   renderer: {fileID: 663229394214551394}
   currentIndex: 0
   activationIndex: 0
-  deactivationIndex: 0
+  deactivationIndex: -1

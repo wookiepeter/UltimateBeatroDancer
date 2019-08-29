@@ -15,16 +15,6 @@ public class LogoImageAnimator : ImageAnimator
         }
 
         _image.sprite = sprites[currentIndex];
-
-        if(currentIndex == activationIndex)
-        {
-            OnActivation();
-        } 
-        if (currentIndex == deactivationIndex)
-        {
-            OnDeactivation();
-        }
-
     }
 
     public override void OffBeat(int offBeatCounter)

@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerToSpawn: {fileID: 7800132031991997728, guid: 4d8651a71ba22ad4b8d4f818ded3d6af,
     type: 3}
+  comboBar: {fileID: 0}
+  initialOffset: 16
+  currentBeat: 0
 --- !u!212 &2954698551647590180
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -84,7 +87,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 5217135151665358807, guid: 708ee28ea05a5474eb6cb961895f63f7,
+  m_Sprite: {fileID: 3280138244286926681, guid: 708ee28ea05a5474eb6cb961895f63f7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,6 +121,9 @@ MonoBehaviour:
   - {fileID: -1613568896159861582, guid: 708ee28ea05a5474eb6cb961895f63f7, type: 3}
   - {fileID: 1485903751803644534, guid: 708ee28ea05a5474eb6cb961895f63f7, type: 3}
   - {fileID: 5217135151665358807, guid: 708ee28ea05a5474eb6cb961895f63f7, type: 3}
+  - {fileID: 4196191104629487561, guid: 708ee28ea05a5474eb6cb961895f63f7, type: 3}
+  - {fileID: -380591377090174674, guid: 708ee28ea05a5474eb6cb961895f63f7, type: 3}
+  - {fileID: 4536200889380258094, guid: 708ee28ea05a5474eb6cb961895f63f7, type: 3}
   renderer: {fileID: 2954698551647590180}
   currentIndex: 0
   activationIndex: 0

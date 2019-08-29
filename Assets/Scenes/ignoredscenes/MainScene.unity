@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 73290520}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: TileGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1338,9 +1338,10 @@ GameObject:
   - component: {fileID: 1078499425}
   - component: {fileID: 1078499427}
   - component: {fileID: 1078499426}
+  - component: {fileID: 1078499428}
   m_Layer: 0
   m_Name: TrapMap
-  m_TagString: Untagged
+  m_TagString: TrapMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1490,6 +1491,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1078499428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078499424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a879e761f10954dab9b19d00758504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1121230279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2098,7 +2111,7 @@ GameObject:
   - component: {fileID: 1534922588}
   m_Layer: 0
   m_Name: ColliderMap
-  m_TagString: Untagged
+  m_TagString: ColliderMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3718,7 +3731,7 @@ GameObject:
   - component: {fileID: 1800447829}
   m_Layer: 0
   m_Name: GoalMap
-  m_TagString: Untagged
+  m_TagString: GoalMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6053,6 +6066,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 740222559082548111, guid: 5485578bff06f774a8babe270f7f2ef2,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1856221098}
+    - target: {fileID: 740222559276124014, guid: 5485578bff06f774a8babe270f7f2ef2,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1001627061}
     - target: {fileID: 740222558769903272, guid: 5485578bff06f774a8babe270f7f2ef2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6158,16 +6181,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 740222559276124014, guid: 5485578bff06f774a8babe270f7f2ef2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1001627061}
-    - target: {fileID: 740222559082548111, guid: 5485578bff06f774a8babe270f7f2ef2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1856221098}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5485578bff06f774a8babe270f7f2ef2, type: 3}
 --- !u!1001 &1340251881095313953
@@ -6256,6 +6269,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 1958112866043152265, guid: dc19f4a3f3b781a4baf39b49c8b8d438,
+        type: 3}
+      propertyPath: comboBarController
+      value: 
+      objectReference: {fileID: 48208444}
     - target: {fileID: 1958112866043152271, guid: dc19f4a3f3b781a4baf39b49c8b8d438,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6311,11 +6329,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1958112866043152265, guid: dc19f4a3f3b781a4baf39b49c8b8d438,
-        type: 3}
-      propertyPath: comboBarController
-      value: 
-      objectReference: {fileID: 48208444}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc19f4a3f3b781a4baf39b49c8b8d438, type: 3}
 --- !u!1001 &6107366832516088876
@@ -6478,6 +6491,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 7800132031991997728, guid: 4d8651a71ba22ad4b8d4f818ded3d6af,
+        type: 3}
+      propertyPath: comboBarController
+      value: 
+      objectReference: {fileID: 241522397}
     - target: {fileID: 7800132031991997730, guid: 4d8651a71ba22ad4b8d4f818ded3d6af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6533,10 +6551,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7800132031991997728, guid: 4d8651a71ba22ad4b8d4f818ded3d6af,
-        type: 3}
-      propertyPath: comboBarController
-      value: 
-      objectReference: {fileID: 241522397}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8651a71ba22ad4b8d4f818ded3d6af, type: 3}

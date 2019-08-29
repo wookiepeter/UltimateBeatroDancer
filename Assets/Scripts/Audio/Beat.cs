@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class Beat : System.IFormattable
 {
-    float _beatTimeDiff;
-    float _beatStart;
-    float _bpm;
+    private float _beatTimeDiff;
+    private float _beatStart;
+    private float _bpm;
     
-    float offset = 0.1f;
+    private float _offset = 0.1f;
 
-    int _beatCounter;
-    float _nextBeatTime;
-    float _lastBeatTime;
+    private int _beatCounter;
+    private float _nextBeatTime;
+    private float _lastBeatTime;
     
     public Beat(float beatTimeDiff, float beatStart) 
     {
@@ -35,7 +35,7 @@ public class Beat : System.IFormattable
     public void reset()
     {
         _beatCounter = 0;
-        _nextBeatTime = BeatStart + offset;
+        _nextBeatTime = BeatStart + _offset;
         _lastBeatTime = _nextBeatTime;
     } 
 
@@ -50,7 +50,7 @@ public class Beat : System.IFormattable
         {
             _beatCounter++;
             _lastBeatTime = _nextBeatTime;
-            _nextBeatTime = _beatStart + _beatCounter * 0.125f * BeatTimeDiff + offset;
+            _nextBeatTime = _beatStart + _beatCounter * 0.125f * BeatTimeDiff + _offset;
             return _beatCounter % 8;
         }
 

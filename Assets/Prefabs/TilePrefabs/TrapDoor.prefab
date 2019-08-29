@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 663229394214551395}
   - component: {fileID: 663229394214551394}
   - component: {fileID: 663229394214551392}
-  - component: {fileID: 663229394214551423}
+  - component: {fileID: 1138040493881405078}
   m_Layer: 0
   m_Name: TrapDoor
   m_TagString: TrapDoor
@@ -107,7 +107,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &663229394214551423
+--- !u!114 &1138040493881405078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 663229394214551422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbe4c416944b404392d0cefeb1051a4, type: 3}
+  m_Script: {fileID: 11500000, guid: da31ac0dbc4569d44b42187862fcba60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
@@ -126,5 +126,3 @@ MonoBehaviour:
   - {fileID: 5993225390555611836, guid: b19c818d6f3b58b49a2f19b8c01b78dc, type: 3}
   renderer: {fileID: 663229394214551394}
   currentIndex: 0
-  activationIndex: 0
-  deactivationIndex: 2

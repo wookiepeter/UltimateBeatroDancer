@@ -129,7 +129,11 @@ MonoBehaviour:
   - {fileID: 8659855412735320720, guid: fd0109388effdce46b79330e86beee83, type: 3}
   - {fileID: -9002694824568986395, guid: fd0109388effdce46b79330e86beee83, type: 3}
   - {fileID: -3472291416900189508, guid: fd0109388effdce46b79330e86beee83, type: 3}
+  - {fileID: 4368435712178247590, guid: fd0109388effdce46b79330e86beee83, type: 3}
+  - {fileID: -7025321616236414608, guid: fd0109388effdce46b79330e86beee83, type: 3}
+  - {fileID: 5534296555679737984, guid: fd0109388effdce46b79330e86beee83, type: 3}
+  - {fileID: -4509065975910029325, guid: fd0109388effdce46b79330e86beee83, type: 3}
   renderer: {fileID: 1994466138647211615}
   currentIndex: 2
-  activationIndex: 0
-  deactivationIndex: 2
+  activationIndex: 2
+  deactivationIndex: 5

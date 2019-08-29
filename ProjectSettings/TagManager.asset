@@ -11,6 +11,9 @@ TagManager:
   - TrapDoor
   - SpikeTrap
   - Lava
+  - GoalMap
+  - EndScreen
+  - WinnerText
   layers:
   - Default
   - TransparentFX

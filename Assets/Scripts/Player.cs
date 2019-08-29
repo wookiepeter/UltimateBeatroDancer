@@ -1,25 +1,25 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+//TODO: Remove
 public class Player : TileAnimator
 {
 
     [Header("Player Fields")]
-
-
     [SerializeField]
-    int playerIndex;
+    int _playerIndex;
     [SerializeField]
     public ComboBarController comboBarController;
     [SerializeField]
-    Grid grid;
-    Tilemap collisionMap;
-    TrapMap trapMap;
+    private Grid _grid;
+    private Tilemap _collisionMap;
+    private Tilemap _goalMap;
+    private TrapMap _trapMap;
     
     [SerializeField]
-    Vector2Int position; 
+    private Vector2Int _position; 
 
     [Header("Player Animation")]
     [SerializeField]
@@ -31,26 +31,25 @@ public class Player : TileAnimator
     [SerializeField]
     private Sprite[] leftAnim;
     [SerializeField]
-    private Sprite[] deatAnim;
+    private Sprite[] deathAnim;
     [SerializeField]
     private Sprite[] trapDoorAnim;
 
     [SerializeField]
-    EDirection _currentDirection = EDirection.DOWN;
+    private EDirection _currentDirection = EDirection.DOWN;
 
-    EDirection _nextDirection = EDirection.NONE;
-    EDirection _currentlyQueuedDirection = EDirection.NONE;
-    bool targetBlocked = false;
-    int _currentOffBeatCounter = 0;
-    SpawnPlayer spawner = null;
+    private EDirection _nextDirection = EDirection.NONE;
+    private EDirection _currentlyQueuedDirection = EDirection.NONE;
+    private bool _targetBlocked = false;
+    private int _currentOffBeatCounter = 0;
+    private SpawnPlayer _spawner = null;
 
-    bool isDead;
+    private bool _isDead;
     
+    private BeatController _beatController;
+    private InputManager _inputManager;
 
-    BeatController _beatController;
-    InputManager _inputManager;
-
-    List<GameObject> currentTrapTileList;
+    private List<GameObject> _currentTrapTileList;
 
     private void Awake()
     {
@@ -59,7 +58,7 @@ public class Player : TileAnimator
 
     public void calculatePosition()
     {
-        position = new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.y));
+        _position = new Vector2Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.y));
     }
 
     // Start is called before the first frame update
@@ -70,10 +69,11 @@ public class Player : TileAnimator
         _inputManager = InputManager.GetInstance();
         changeDirection(_currentDirection);
         Debug.Log("Starting animation");
-        grid = GameObject.FindGameObjectWithTag("TileGrid").GetComponent<Grid>();
-        collisionMap = GameObject.FindGameObjectWithTag("ColliderMap").GetComponent<Tilemap>();
-        trapMap = GameObject.FindGameObjectWithTag("TrapMap").GetComponent<TrapMap>();
-        currentTrapTileList = new List<GameObject>();
+        _grid = GameObject.FindGameObjectWithTag("TileGrid").GetComponent<Grid>();
+        _collisionMap = GameObject.FindGameObjectWithTag("ColliderMap").GetComponent<Tilemap>();
+        _goalMap = GameObject.FindGameObjectWithTag("GoalMap").GetComponent<Tilemap>();
+        _trapMap = GameObject.FindGameObjectWithTag("TrapMap").GetComponent<TrapMap>();
+        _currentTrapTileList = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -84,12 +84,12 @@ public class Player : TileAnimator
 
     public void SetSpawner(SpawnPlayer spawner)
     {
-        this.spawner = spawner;
+        this._spawner = spawner;
     }
 
     void HandleInput()
     {
-        EDirection direction = _inputManager.GetDirectionInputForPlayer(playerIndex);
+        EDirection direction = _inputManager.GetDirectionInputForPlayer(_playerIndex);
 
         HandleInputDirectionPress(direction);
     }
@@ -114,7 +114,7 @@ public class Player : TileAnimator
         base.OffBeat(offBeatCounter);
         if(offBeatCounter == 1)
         { 
-            if(_currentlyQueuedDirection != EDirection.NONE)
+            if(_currentlyQueuedDirection != EDirection.NONE && _isDead == false)
             {
                 startMovement();
                 comboBarController.SetBar(true);
@@ -127,10 +127,10 @@ public class Player : TileAnimator
         if (offBeatCounter == 7)
         {
             comboBarController.ResetIndicator();
-            if (isDead)
+            if (_isDead)
             {
                 BeatController.GetInstance().BeatSubject.RemoveObserver(this);
-                this.spawner.activate();
+                this._spawner.activate();
                 Destroy(this.gameObject);
             }
         } 
@@ -141,28 +141,42 @@ public class Player : TileAnimator
         _nextDirection = _currentlyQueuedDirection;
         _currentlyQueuedDirection = EDirection.NONE;
         changeDirection(_nextDirection);
-        Vector2Int nextTilePos = position + _inputManager.GetVector(_nextDirection);
-        Vector3Int nextPos = grid.LocalToCell(new Vector3(nextTilePos.x, nextTilePos.y));
-        TileBase tile = collisionMap.GetTile(nextPos);
+        Vector2Int nextTilePos = _position + _inputManager.GetVector(_nextDirection);
+        Vector3Int nextPos = _grid.LocalToCell(new Vector3(nextTilePos.x, nextTilePos.y));
+        TileBase tile = _collisionMap.GetTile(nextPos);
         if(tile != null)
         {
             Debug.Log("Tile should be blocked: " + tile.ToString());
-            targetBlocked = true;
+            _targetBlocked = true;
         }
         else
         {
-            currentTrapTileList.Clear();
-            position = nextTilePos;
-            if(trapMap.TileHasTrap(nextPos))
+            _position = nextTilePos;
+            _currentTrapTileList.Clear();
+            if(_trapMap.TileHasTrap(nextPos))
             {
-                GameObject trapTile = trapMap.GetTrapTileList(nextPos)[0];
+                GameObject trapTile = _trapMap.GetTrapTileList(nextPos)[0];
                 Debug.Log("trapTile: " + (trapTile != null));
 
                 if (trapTile != null)
                 {
-                    currentTrapTileList = trapMap.GetTrapTileList(nextPos);
+                    _currentTrapTileList = _trapMap.GetTrapTileList(nextPos);
                 }  
             }
+        }
+    }
+
+    void endMovement()
+    {
+        Vector3Int currentPos = _grid.LocalToCell(new Vector3(_position.x, _position.y));
+        TileBase tile = _goalMap.GetTile(currentPos); 
+        if(tile != null)
+        {
+            Debug.Log("Player " + gameObject.name + " Reached Goal -> Should end Game");
+            CanvasGroup endScreen = GameObject.FindGameObjectWithTag("EndScreen").GetComponent<CanvasGroup>();
+            endScreen.alpha = 1f;
+            TMPro.TextMeshProUGUI textMash = GameObject.FindGameObjectWithTag("WinnerText").GetComponent<TMPro.TextMeshProUGUI>();
+            textMash.text = "Player " + (_playerIndex + 1) + " won the Round!";
         }
     }
 
@@ -172,7 +186,7 @@ public class Player : TileAnimator
 
         if(_nextDirection != EDirection.NONE)
         {
-            if (targetBlocked && offBeatCounter == 4)
+            if (_targetBlocked && offBeatCounter == 4)
             {
                 moveVec *= -1;
                 transform.position += 0.625f * new Vector3(moveVec.x, moveVec.y);
@@ -186,25 +200,14 @@ public class Player : TileAnimator
             if (offBeatCounter > 4)
             {
                 _nextDirection = EDirection.NONE;
-                targetBlocked = false;
+                _targetBlocked = false;
             }
         }
     }
 
     public override void OnBeat()
     {
-        /*
-        if(_currentDirection == EDirection.LEFT)
-        {
-            _currentDirection = EDirection.UP;
-        } else {
-            _currentDirection += 1;
-        }
-        changeDirection(_currentDirection);
-        Debug.Log("Changing Direction");
-        */
-
-        if (isDead)
+        if (_isDead)
         {
             //this.enabled = false;
             //this.GetComponent<TileAnimator>().enabled = false;
@@ -214,28 +217,42 @@ public class Player : TileAnimator
             Destroy(this.gameObject);
         }
         base.OnBeat();
-    
 
-        foreach (GameObject gameObject in currentTrapTileList)
+        endMovement();
+
+        foreach (GameObject gameObject in _currentTrapTileList)
         {
             Debug.Log("Currently on trap " + gameObject.name);
-            switch (gameObject.tag)
+            TileAnimator tileAnimator = gameObject.GetComponent<TileAnimator>();
+            if (tileAnimator != null && tileAnimator.isActive)
             {
-                case "TrapDoor":
-                    sprites = trapDoorAnim;
-                    break;
-                case "SpikeTrap":
-                    sprites = deatAnim;
-
-                    break;
-                case "Lava":
-                    sprites = deatAnim;
-                    break;
-                case "SpearTrap":
-                    sprites = deatAnim;
-                    break;
+                switch (gameObject.tag)
+                {
+                    case "SpikeTrap":
+                        sprites = deathAnim;
+                        break;
+                    case "Lava":
+                        sprites = deathAnim;
+                        break;
+                    case "SpearTrap":
+                        sprites = deathAnim;
+                        break;
+                }
+                _isDead = true;
             }
-            isDead = true;
+            TrapDoorAnimator trapDoorAnimator = gameObject.GetComponent<TrapDoorAnimator>();
+            if (trapDoorAnimator != null && gameObject.tag == "TrapDoor")
+            {
+                if(trapDoorAnimator.isOpen)
+                {
+                    _isDead = true;
+                    sprites = trapDoorAnim;
+                } 
+                else
+                {
+                    trapDoorAnimator.isActivated = true;
+                }
+            }
         }
     }
     // should be called on Beat!

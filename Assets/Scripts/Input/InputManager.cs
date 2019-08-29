@@ -46,6 +46,15 @@ public class InputManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+        if (_inputRequester.InputButtonDown(EInputButtons.RB))
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            if (currentSceneIndex >= 4)
+            {
+                currentSceneIndex = 0;
+            }
+            SceneManager.LoadScene(currentSceneIndex);
+        }
     }
 
     public EDirection GetDirectionInputForPlayer(int playerIndex)

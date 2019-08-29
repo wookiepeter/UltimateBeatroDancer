@@ -41,10 +41,10 @@ MonoBehaviour:
   - left_stick
   - right_stick
   _p0KeyboardButtons:
-  - s
-  - d
+  - i
   - a
-  - w
+  - u
+  - v
   - left ctrl
   - space
   - r
@@ -60,10 +60,10 @@ MonoBehaviour:
   _p0KeyViewVerticalPos: 7
   _p0KeyViewVerticalNeg: 8
   _p1KeyboardButtons:
-  - k
-  - l
-  - j
-  - i
+  - r
+  - t
+  - n
+  - g
   - right ctrl
   - backspace
   - '[plus]'

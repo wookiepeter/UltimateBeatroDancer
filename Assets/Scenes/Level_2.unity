@@ -5198,7 +5198,7 @@ GameObject:
   - component: {fileID: 1800447829}
   m_Layer: 0
   m_Name: GoalMap
-  m_TagString: Untagged
+  m_TagString: GoalMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -27,6 +27,7 @@ public class BeatController : MonoBehaviour
     BeatSubject _beatSubject;
 
     public BeatSubject BeatSubject { get => _beatSubject; }
+    public float ActualBeatTime { get => _beat.BeatTimeDiff / _playSpeed; }
 
     public static BeatController GetInstance()
     {

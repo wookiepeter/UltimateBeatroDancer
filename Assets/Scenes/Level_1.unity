@@ -3902,7 +3902,7 @@ GameObject:
   - component: {fileID: 1800447829}
   m_Layer: 0
   m_Name: GoalMap
-  m_TagString: Untagged
+  m_TagString: GoalMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6422,21 +6422,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 740222558714891803, guid: 5485578bff06f774a8babe270f7f2ef2,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 740222559082548111, guid: 5485578bff06f774a8babe270f7f2ef2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 740222559276124014, guid: 5485578bff06f774a8babe270f7f2ef2,
-        type: 3}
-      propertyPath: player
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5485578bff06f774a8babe270f7f2ef2, type: 3}
